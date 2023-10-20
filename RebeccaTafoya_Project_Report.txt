@@ -1,0 +1,90 @@
+***************************************************************************
+Created by: Rebecca Tafoya, EID: RRT746
+Date created: August 11th, 2023
+
+
+SUMMARY OF THE FUNCTIONALITIES AND IMPLEMENTATION
+- Home Screen:
+	- You can click on the "play" button to move to the Game Screen.
+	- You can click on the "View Top Score" button to view the score	  
+	  board screen.
+	- If you hover your mouse over one of the buttons, it lights up
+	  yellow. 
+
+- Game Screen:
+	- You can use the left and right arrow buttons on the keyboard to 
+	  move the ball left and right. Your objective is to avoid the 
+	  clouds for as long as possible. 
+	- A score tracker will keep track of your score. If you get one of 
+	  the top 5 highest scores, the winner screen will appear. If not, 
+	  the loser screen will apprear. 
+
+- Loser Screen:
+	- This screen shows up if you don't get one of the top 5 highest 
+	  scores of all time. 
+	- You can click on the "play again" button to play again.
+	- You can click on the "View Top Scores" button to view the score
+	  board screen. 
+
+- Winner Screen:
+	- You can click on the data entry box and a line will appear that
+	  represents your typing cursor. Once you click on it, you can use
+	  the keyboard to type your name. You can click on backspace to 
+	  delete what you've written before hiting enter. 
+	- After typing your name, you can click enter and your name and 
+	  score will be populated in order on the score board screen. 
+	- You can click the "view top scores" button to view the score 
+	  board screen, but you can't return if you do. 
+
+- Score Board Screen:
+	- You can see the score board with the top scores of players
+	- You can press the "Home" button to go back to the home screen.
+	- You can hover your mouse over the "Home" button and it will 
+	  illuminate the button.
+
+
+WHAT ROLE YOUR CLASSES PLAY AND WHAT THEY DO:
+- Ball class:
+	This class creates the red ball with the flower in the center (i.e.
+	the user-controlled ball. It handles it's location and displays it
+	where it needs to go. It also works to continuously spin the flower
+	in the center of the ball so that the ball has heirarical motion. 
+
+- Button class:
+	This class is used to create all the buttons. It tracks the mouse
+	location and checks if the button needs to be illuminated. It also
+	gives each button functionality upon initialization based on the 
+	button_type (ex: Enter button does something different than the 
+	start button). 
+
+- Cloud class:
+	This class creates the clouds, checks for collisions with the ball
+	and displays the clouds in new locations. 
+
+- EntryBox class:
+	This class was used to create the Name Entry box that displays 
+	on the winner screen. It allows users to click on it, then type out
+	their name. Once the user presses enter, the data from the entry
+	box is sent to the name column of the highScore table using the 
+	ScoreHandler class.
+
+- ScoreHandler class:
+	This class downloads an .csv file with the top 5 best scores. Once
+ 	the player loses, it compares their score to the lowest score. If
+	the player's score is higher than the lowest top score, the
+ 	player's score will populate the score board. The location of the
+ 	player's score on the score board is also determined in this class
+	by going through each of the top 5 scores and determining where the
+	current score lies.  
+
+ANY UNEXPECTED CHALLENGES COMPARED TO YOUR PROPOSAL:
+	There were no unexpected challenges because everything was 
+	challenging as I had expected. However, I had to ask ChatGPT how to 
+	create the data entry box. 
+
+	See ChatGPT conversation here:
+ 	https://chat.openai.com/share/7c61b879-f4de-4165-9bfc-15e671c80260
+ 
+
+WHAT GROUP MEMBERS WORKED ON WHICH PART OF THE ASSIGNMENT: 
+	I worked alone. 
